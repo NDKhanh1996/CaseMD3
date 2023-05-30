@@ -274,7 +274,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(./img/home/home.jpg) no-repeat center / cover;
+    background: url(../../assets/home/home.jpg) no-repeat center / cover;
 }
 
 .home .content {
