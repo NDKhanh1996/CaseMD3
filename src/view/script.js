@@ -3,7 +3,6 @@ let cartItem = document.querySelector('.cart-items-container');
 let searchForm = document.querySelector('.search-form');
 
 document.querySelector('#menu-btn').onclick = () => {
-    // cartItem.classList.toggle('active');
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
