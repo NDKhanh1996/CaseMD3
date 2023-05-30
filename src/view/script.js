@@ -1,27 +1,21 @@
-let menu = document.querySelector('.menu-btn');
-let cartItem = document.querySelector('.cart-items-container');
-let searchForm = document.querySelector('.search-form');
+const menuBtn = $('.header .menu-btn');
+const cartBtn = $('.header .cart-items-container');
+const searchBtn = $('.header .search-form');
 
-document.querySelector('#menu-btn').onclick = () => {
-    menu.classList.toggle('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
+const toggleMenu = () => {
+    menuBtn.toggleClass('active');
 }
 
-document.querySelector('#search-btn').onclick = () => {
-    searchForm.classList.toggle('active');
-    menu.classList.remove('active');
-    cartItem.classList.remove('active');
+const toggleCart = () => {
+    cartBtn.toggleClass('active');
 }
 
-document.querySelector('#cart-btn').onclick = () => {
-    cartItem.classList.toggle('active');
-    menu.classList.remove('active');
-    searchForm.classList.remove('active');
+const toggleSearch = () => {
+    searchBtn.toggleClass('active');
 }
 
-window.onscroll = () => {
-    menu.classList.remove('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
+$(window).scroll(() => {
+    if (menuBtn.hasClass('active')) menuBtn.removeClass('active');
+    if (cartBtn.hasClass('active')) cartBtn.removeClass('active');
+    if (searchBtn.hasClass('active')) searchBtn.removeClass('active');
+});
