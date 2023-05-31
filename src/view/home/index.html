@@ -24,9 +24,9 @@
         <a href='#blogs'>Blogs</a>
     </nav>
     <div class='icons'>
-        <div class='fas fa-search' id='search-btn'></div>
-        <div class='fas fa-shopping-cart' id='cart-btn'></div>
-        <div class='fas fa-bars' id='menu-btn'></div>
+        <div class='fas fa-search' id='search-btn' onclick="toggleSearch()"></div>
+        <div class='fas fa-shopping-cart' id='cart-btn' onclick="toggleCart()"></div>
+        <div class='fas fa-bars' id='menu-btn' onclick="toggleMenu()"></div>
     </div>
     <div class='search-form'>
         <input type='search' id='search-box' placeholder='Seek more...'>
@@ -84,6 +84,37 @@
     </div>
 
     <!--buy item-->
+
+    <!-- login option -->
+
+    <div class='menu-btn'>
+        <form action=''>
+            <div class='menuInputBox'>
+                <label for='menuInputName'><span class='fas fa-user'></span></label>
+                <input type='text' id='menuInputName' placeholder='Name'>
+            </div>
+
+            <div class='menuInputBox'>
+                <label for='menuInputPhone'><span class='fas fa-phone'></span></label>
+                <input type='number' id='menuInputPhone' placeholder='Number'>
+            </div>
+
+            <div class='menuInputBox'>
+                <label for='menuInputEmail'><span class='fas fa-envelope'></span></label>
+                <input type='email' id='menuInputEmail' placeholder='Email'>
+            </div>
+
+            <div class='menuInputBox'>
+                <label for='password'><span class='fas fa-envelope'></span></label>
+                <input type='password' id='password' placeholder='password'>
+            </div>
+
+            <input type='submit' value='log in' class='btn'>
+            <input type='submit' value='sign in' class='btn'>
+        </form>
+    </div>
+
+    <!-- login option -->
 
 </header>
 
@@ -400,7 +431,7 @@
 <!-- footer section ends -->
 
 <!-- custom js file link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
-
