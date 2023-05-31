@@ -4,7 +4,6 @@ const fs = require('fs');
 const url = require('url')
 const PORT = 8080;
 const handleError = require('./src/controller/handle/error.controller');
-// const a = require('./src/view/home/script')
 
 let mimeTypes={
     'jpg' : 'images/jpg',
@@ -22,7 +21,6 @@ let mimeTypes={
 const server = http.createServer((req, res) => {
     let urlPath = url.parse(req.url).pathname;
     let trimPath = urlPath.replace(/^\/+|\/+$/g, '');
-    // console.log(trimPath)
 
     const filesDefences = urlPath.match(/\.js|\.css|\.png|\.svg|\.jpg|\.ttf|\.woff|\.woff2|\.eot/);
     if (filesDefences) {
