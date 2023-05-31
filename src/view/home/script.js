@@ -1,6 +1,7 @@
 const menuBtn = $('.header .menu-btn');
 const cartBtn = $('.header .cart-items-container');
 const searchBtn = $('.header .search-form');
+// const a = require('../../view/home/style.css')
 
 const toggleMenu = () => {
     menuBtn.toggleClass('active');
