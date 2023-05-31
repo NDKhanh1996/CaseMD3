@@ -114,7 +114,7 @@ section {
 }
 
 #menu-btn {
-    display: none;
+    display: flexbox;
 }
 
 .header .search-form {
