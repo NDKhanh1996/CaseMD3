@@ -5,6 +5,8 @@ const url = require('url')
 const PORT = 8080;
 const handleError = require('./src/controller/handle/error.controller');
 
+// const a = require('./src/view/home/index.html')
+
 let mimeTypes={
     'jpg' : 'images/jpg',
     'png' : 'images/png',
