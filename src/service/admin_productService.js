@@ -16,6 +16,19 @@ class ProductService {
             })
         })
     }
+
+    productAdd = () => {
+        return new Promise((resolve, reject) => {
+            this.connect.query(`INSERT INTO products (productName, price, quantity, description, categoryId, image)
+            VALUES ("Cà phê sữa", 1000, 1, "ngon", 1, "https://lepathcoffee.com/wp-content/uploads/2021/12/Cafe-Sua-2.jpg")`, (err, addHtml) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(addHtml)
+                }
+            })
+        })
+    }
 }
 
 module.exports = new ProductService();
