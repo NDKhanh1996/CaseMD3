@@ -1,11 +1,9 @@
 const http = require('http');
-const router = require("./src/controller/router");
+const router = require("./src/routers/web.router");
 const fs = require('fs');
 const url = require('url')
 const PORT = 8080;
-const handleError = require('./src/controller/handle/error.controller');
-
-// const a = require('./src/view/home/index.html')
+const handleError = require('./src/controller/error.controller');
 
 let mimeTypes={
     'jpg' : 'images/jpg',

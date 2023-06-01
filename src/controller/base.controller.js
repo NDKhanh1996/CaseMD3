@@ -11,4 +11,4 @@ class BaseController {
     }
 }
 
-module.exports = new BaseController
+module.exports = BaseController
