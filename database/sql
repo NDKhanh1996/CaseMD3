@@ -1,0 +1,34 @@
+CREATE TABLE users(
+    userId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nameUser VARCHAR(255) NOT NULL,
+    phoneNumber INT NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role BOOLEAN
+);
+CREATE TABLE products(
+    productId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    productName VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    quantity INT NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    categoryId INT,
+    FOREIGN KEY(categoryId) REFERENCES categories(categoryId),
+    image TEXT
+);
+CREATE TABLE categories(
+    categoryId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    categoryName VARCHAR(255) NOT NULL
+);
+CREATE TABLE carts(
+    cartId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    userId INT,
+    FOREIGN KEY(userId) REFERENCES users(userId)
+);
+CREATE TABLE temporaries(
+    productId INT,
+    FOREIGN KEY(productId) REFERENCES products(productId),
+    cartId INT,
+    FOREIGN KEY(cartId) REFERENCES carts(cartId),
+    quantity INT NOT NULL
+)
