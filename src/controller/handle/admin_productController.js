@@ -40,8 +40,9 @@ class ProductController {
         }
     }
 
-    productAdd = () => {
+    productAdd = (req, res) => {
         if (req.method === "GET") {
+            
             fs.readFile("./src/products/add.html", "utf-8", (err, addHtml) => {
                 res.write(addHtml);
                 res.end();
