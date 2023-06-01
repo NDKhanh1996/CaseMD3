@@ -1,7 +1,9 @@
 const productController = require("./handle/admin_productController");
+const HomeController = require('./handle/home.controller')
 const router = {
-    "home": productController.showHome,
+    "home" : HomeController.getHomePage,
     "add": productController
 }
+
 
 module.exports = router;
