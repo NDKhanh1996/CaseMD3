@@ -1,5 +1,6 @@
 const fs = require("fs");
-const productService = require("../../service/admin_productService");
+const productService = require('../service/product.service')
+
 class ProductController {
     getHtmlProduct = (products, getHtml) => {
         let productHtml = "";
@@ -40,9 +41,6 @@ class ProductController {
         }
     }
 
-    productAdd = () => {
-        
-    }
 }
 
 module.exports = new ProductController();
