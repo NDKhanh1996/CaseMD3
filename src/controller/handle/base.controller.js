@@ -1,14 +1,14 @@
 const fs = require('fs');
-
 class BaseController {
-    showHome = async (req, res) => {
-        fs.readFile('./src/view/home/index.html', "utf-8", (err, data) =>{
-            if (err) throw err.message
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.write(data);
-            res.end();
-        });
+    getTemplate(pathFile){
+        return new Promise((resolve, reject) => {
+            fs.readFile(pathFile, "utf-8",(err, data)=>{
+                if (err) {
+                    reject(err.message)
+                } resolve(data)
+            })
+        })
     }
 }
 
-module.exports = new BaseController()
+module.exports = new BaseController

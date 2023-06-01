@@ -1,7 +1,9 @@
-const baseController = require('./handle/base.controller');
-
+const productController = require("./handle/admin_productController");
+const HomeController = require('./handle/home.controller')
 const router = {
-    "home" : baseController.showHome,
+    "home" : HomeController.getHomePage,
+    "add": productController
 }
+
 
 module.exports = router;
